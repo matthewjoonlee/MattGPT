@@ -1,0 +1,19 @@
+[project]
+name = "mattgpt"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "tenacity>=9.1,<10",
+    "pybreaker>=1.4,<2",
+    "langfuse==4.15.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4,<9"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["mattgpt*"]
