@@ -10,6 +10,10 @@ dependencies = [
     "google-auth-oauthlib>=1.2",
     "requests>=2.32",
     "pydantic-settings>=2.5",
+    "numpy",
+    "pandas",
+    "scipy",
+    "statsmodels",
 ]
 
 [project.optional-dependencies]
