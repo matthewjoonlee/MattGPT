@@ -5,3 +5,13 @@ __pycache__/
 *.egg-info/
 mattgpt/self_healing/.fixlog/
 .env
+
+# Secrets / credentials — never commit
+credentials/
+client_secret*.json
+token.json
+
+# Data
+*.db
+*.sqlite
+*.sqlite3
