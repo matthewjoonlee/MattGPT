@@ -6,6 +6,10 @@ dependencies = [
     "tenacity>=9.1,<10",
     "pybreaker>=1.4,<2",
     "langfuse==4.15.4",
+    "numpy",
+    "pandas",
+    "scipy",
+    "statsmodels",
 ]
 
 [project.optional-dependencies]
