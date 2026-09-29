@@ -10,11 +10,18 @@ Set up the Google Cloud project + OAuth client (Testing mode, self as test user)
 
 Window B is building the Tier 1/2/3 compute layer now, against a synthetic dataset shaped like what this phase's real pipeline will produce — see `spec/stats-core.md`. This doesn't block on or block Phase 0; it's ready to be pointed at real data once Phase 0 ships. Tier 3 here means observational N-of-1 counterfactual inference only.
 
+## Parallel track: self-healing reliability layer
+
+Window D is building the retry/backoff, circuit-breaker, fault-classification,
+and fix-logging wrapper now, as a standalone module tested against dummy
+failing functions — see `spec/self-healing.md`. No dependency on Phase 0's
+data foundation; it's ready for other modules to apply to their own tool
+calls as soon as those modules exist.
+
 ## Out of scope right now
 
 - Real controlled experiments (randomization/scheduling, alternating-day protocols — the QuantifyMe-fork half of Tier 3)
 - The router and any model integration (Ollama, Jev, Hugging Face) — see `spec/local-model-layer.md` for the plan once this phase starts
-- Self-healing layer
 - Gamification mechanics
 - Calendar integration
 - The gambling / audit-the-commercial-score / life-event modules
